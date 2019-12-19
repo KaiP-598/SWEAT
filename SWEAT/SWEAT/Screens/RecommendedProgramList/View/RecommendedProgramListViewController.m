@@ -7,6 +7,7 @@
 //
 
 #import "RecommendedProgramListViewController.h"
+#import "Program.h"
 
 @interface RecommendedProgramListViewController ()
 
@@ -22,6 +23,10 @@
     // Do any additional setup after loading the view.
     NSDictionary *dict = [self readJSONFromFile];
     NSLog(@"%@", dict);
+    NSArray *programs = [Program objectFromDictionary:dict];
+    NSLog(@"%@", programs);
+    Program *program1 = programs[0];
+    NSLog(@"%@", program1.tags.dictionary);
 }
 
 - (NSDictionary *)readJSONFromFile
