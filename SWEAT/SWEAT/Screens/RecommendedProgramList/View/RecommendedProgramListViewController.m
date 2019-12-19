@@ -6,13 +6,13 @@
 //  Copyright © 2019 WuKaipeng. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "RecommendedProgramListViewController.h"
 
-@interface ViewController ()
+@interface RecommendedProgramListViewController ()
 
 @end
 
-@implementation ViewController
+@implementation RecommendedProgramListViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

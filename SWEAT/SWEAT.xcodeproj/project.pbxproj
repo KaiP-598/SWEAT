@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4D16846023AA543A00D919B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D16845F23AA543A00D919B0 /* AppDelegate.m */; };
-		4D16846323AA543A00D919B0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D16846223AA543A00D919B0 /* ViewController.m */; };
+		4D16846323AA543A00D919B0 /* RecommendedProgramListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D16846223AA543A00D919B0 /* RecommendedProgramListViewController.m */; };
 		4D16846623AA543A00D919B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D16846423AA543A00D919B0 /* Main.storyboard */; };
 		4D16846823AA543C00D919B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D16846723AA543C00D919B0 /* Assets.xcassets */; };
 		4D16846B23AA543C00D919B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D16846923AA543C00D919B0 /* LaunchScreen.storyboard */; };
@@ -30,8 +30,8 @@
 		4D16845B23AA543A00D919B0 /* SWEAT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SWEAT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D16845E23AA543A00D919B0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4D16845F23AA543A00D919B0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		4D16846123AA543A00D919B0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		4D16846223AA543A00D919B0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4D16846123AA543A00D919B0 /* RecommendedProgramListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecommendedProgramListViewController.h; sourceTree = "<group>"; };
+		4D16846223AA543A00D919B0 /* RecommendedProgramListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecommendedProgramListViewController.m; sourceTree = "<group>"; };
 		4D16846523AA543A00D919B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4D16846723AA543C00D919B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D16846A23AA543C00D919B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -81,10 +81,9 @@
 		4D16845D23AA543A00D919B0 /* SWEAT */ = {
 			isa = PBXGroup;
 			children = (
+				4D16848223AA5A9900D919B0 /* Screens */,
 				4D16845E23AA543A00D919B0 /* AppDelegate.h */,
 				4D16845F23AA543A00D919B0 /* AppDelegate.m */,
-				4D16846123AA543A00D919B0 /* ViewController.h */,
-				4D16846223AA543A00D919B0 /* ViewController.m */,
 				4D16846423AA543A00D919B0 /* Main.storyboard */,
 				4D16846723AA543C00D919B0 /* Assets.xcassets */,
 				4D16846923AA543C00D919B0 /* LaunchScreen.storyboard */,
@@ -101,6 +100,47 @@
 				4D16847923AA543C00D919B0 /* Info.plist */,
 			);
 			path = SWEATTests;
+			sourceTree = "<group>";
+		};
+		4D16848223AA5A9900D919B0 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				4D16848323AA5AAB00D919B0 /* RecommendedProgramList */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		4D16848323AA5AAB00D919B0 /* RecommendedProgramList */ = {
+			isa = PBXGroup;
+			children = (
+				4D16848423AA5C5F00D919B0 /* Model */,
+				4D16848523AA5C6400D919B0 /* View */,
+				4D16848623AA5C6800D919B0 /* ViewModel */,
+			);
+			path = RecommendedProgramList;
+			sourceTree = "<group>";
+		};
+		4D16848423AA5C5F00D919B0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4D16848523AA5C6400D919B0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4D16846123AA543A00D919B0 /* RecommendedProgramListViewController.h */,
+				4D16846223AA543A00D919B0 /* RecommendedProgramListViewController.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4D16848623AA5C6800D919B0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,7 +243,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D16846323AA543A00D919B0 /* ViewController.m in Sources */,
+				4D16846323AA543A00D919B0 /* RecommendedProgramListViewController.m in Sources */,
 				4D16846E23AA543C00D919B0 /* main.m in Sources */,
 				4D16846023AA543A00D919B0 /* AppDelegate.m in Sources */,
 			);
