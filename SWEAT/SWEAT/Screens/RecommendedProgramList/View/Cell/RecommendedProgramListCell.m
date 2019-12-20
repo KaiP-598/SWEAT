@@ -2,7 +2,7 @@
 //  RecommendedProgramListCell.m
 //  SWEAT
 //
-//  Created by Kaipeng Wu on 19/12/19.
+//  Created by Kaipeng Wu on 20/12/19.
 //  Copyright © 2019 WuKaipeng. All rights reserved.
 //
 

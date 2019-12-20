@@ -2,7 +2,7 @@
 //  RecommendedProgramListCell.h
 //  SWEAT
 //
-//  Created by Kaipeng Wu on 19/12/19.
+//  Created by Kaipeng Wu on 20/12/19.
 //  Copyright © 2019 WuKaipeng. All rights reserved.
 //
 
@@ -11,6 +11,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface RecommendedProgramListCell : UITableViewCell
+
+@property (weak, nonatomic) IBOutlet UILabel *programNameLabel;
+
 
 @end
 
