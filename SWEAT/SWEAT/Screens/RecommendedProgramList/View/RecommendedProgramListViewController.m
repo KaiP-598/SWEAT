@@ -24,11 +24,15 @@ NSMutableArray* programs;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    //Place Logo at navigation bar
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"sweat-logo.png"]];
     
     _recommendedLabel.font = [UIFont fontWithName:@"Montserrat-Bold" size:20];
     _recommendedLabel.text = @"Recommended for you";
     
+    
+    //Read JSON file
     NSDictionary *dict = [self readJSONFromFile];
     NSMutableArray *programsFromJson = [Program objectFromDictionary:dict];
 
@@ -66,6 +70,15 @@ NSMutableArray* programs;
     Program *program = programs[indexPath.row];
     [cell configureCell:program];
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return UITableViewAutomaticDimension;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 100;
 }
 
 @end

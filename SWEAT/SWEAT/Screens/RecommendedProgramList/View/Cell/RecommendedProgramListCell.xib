@@ -12,26 +12,57 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecommendedProgramListCell" id="KGk-i7-Jjw" customClass="RecommendedProgramListCell">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="RecommendedProgramListCell" rowHeight="350" id="KGk-i7-Jjw" customClass="RecommendedProgramListCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="350"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="349.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GL0-Rd-fx4">
-                        <rect key="frame" x="38" y="11" width="42" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZgX-Zg-GTz">
+                        <rect key="frame" x="20" y="21" width="280" height="318.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GL0-Rd-fx4">
+                                <rect key="frame" x="10" y="10" width="260" height="167.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bda-zb-OlC">
+                                <rect key="frame" x="10" y="237.5" width="260" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="d6u-ey-Dka"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="bda-zb-OlC" secondAttribute="bottom" constant="60" id="FwS-80-xbU"/>
+                            <constraint firstAttribute="trailing" secondItem="bda-zb-OlC" secondAttribute="trailing" constant="10" id="M2n-Gm-rbi"/>
+                            <constraint firstItem="bda-zb-OlC" firstAttribute="leading" secondItem="ZgX-Zg-GTz" secondAttribute="leading" constant="10" id="M9s-uW-VfV"/>
+                            <constraint firstItem="GL0-Rd-fx4" firstAttribute="leading" secondItem="ZgX-Zg-GTz" secondAttribute="leading" constant="10" id="MPY-WN-JtW"/>
+                            <constraint firstAttribute="trailing" secondItem="GL0-Rd-fx4" secondAttribute="trailing" constant="10" id="ZrG-cQ-1Xb"/>
+                            <constraint firstItem="bda-zb-OlC" firstAttribute="top" secondItem="GL0-Rd-fx4" secondAttribute="bottom" constant="60" id="bcy-aL-FEn"/>
+                            <constraint firstItem="GL0-Rd-fx4" firstAttribute="top" secondItem="ZgX-Zg-GTz" secondAttribute="top" constant="10" id="ptt-a2-8wj"/>
+                        </constraints>
+                    </view>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="ZgX-Zg-GTz" secondAttribute="bottom" constant="10" id="Mi7-8s-PCJ"/>
+                    <constraint firstAttribute="trailing" secondItem="ZgX-Zg-GTz" secondAttribute="trailing" constant="20" id="Xoi-hM-E89"/>
+                    <constraint firstItem="ZgX-Zg-GTz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="bmh-2S-rrR"/>
+                    <constraint firstItem="ZgX-Zg-GTz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="it5-3f-8JH"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <connections>
+                <outlet property="containerView" destination="ZgX-Zg-GTz" id="Xb9-1y-Cm1"/>
                 <outlet property="programNameLabel" destination="GL0-Rd-fx4" id="d6G-mF-wmR"/>
             </connections>
+            <point key="canvasLocation" x="52.799999999999997" y="48.575712143928037"/>
         </tableViewCell>
     </objects>
 </document>
