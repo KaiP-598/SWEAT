@@ -23,6 +23,8 @@ NSMutableArray* programs;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"sweat-logo.png"]];
+    
     NSDictionary *dict = [self readJSONFromFile];
     NSMutableArray *programsFromJson = [Program objectFromDictionary:dict];
 
