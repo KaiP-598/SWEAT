@@ -7,6 +7,7 @@
 //
 
 #import "RecommendedProgramListCell.h"
+#import "Program.h"
 
 @implementation RecommendedProgramListCell
 
@@ -20,5 +21,11 @@
 
     // Configure the view for the selected state
 }
+
+- (void)configureCell: (Program*)program {
+    
+    _programNameLabel.text = program.name;
+}
+
 
 @end

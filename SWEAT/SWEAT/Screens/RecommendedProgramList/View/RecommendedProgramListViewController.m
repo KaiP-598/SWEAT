@@ -14,20 +14,20 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
-
 @end
 
 @implementation RecommendedProgramListViewController
+
+NSMutableArray* programs;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     NSDictionary *dict = [self readJSONFromFile];
-    NSLog(@"%@", dict);
-    NSArray *programs = [Program objectFromDictionary:dict];
-    NSLog(@"%@", programs);
-    Program *program1 = programs[0];
-    NSLog(@"%@", program1.tags.dictionary);
+    NSMutableArray *programsFromJson = [Program objectFromDictionary:dict];
+
+    programs = programsFromJson;
+    
     
     UINib *nib = [UINib nibWithNibName:@"RecommendedProgramListCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"RecommendedProgramListCell"];
@@ -48,7 +48,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 8;
+    return programs.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -57,7 +57,8 @@
     
     RecommendedProgramListCell *cell = [self.tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
-    cell.programNameLabel.text = @"123";
+    Program *program = programs[indexPath.row];
+    [cell configureCell:program];
     return cell;
 }
 

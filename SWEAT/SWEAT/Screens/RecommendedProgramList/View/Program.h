@@ -17,6 +17,7 @@
 
 @property (nonatomic, strong) NSNumber *id;
 @property (nonatomic, strong) NSString *acronym;
+@property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSMutableArray *attributes;
 @property (nonatomic, strong) Trainer *trainer;
 @property (nonatomic, strong) NSMutableArray *tags;

@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RecommendedProgramListViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
+@interface RecommendedProgramListViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>{
+    
+
+}
+
 
 
 @end
