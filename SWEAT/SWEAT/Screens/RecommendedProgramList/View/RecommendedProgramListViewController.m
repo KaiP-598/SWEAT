@@ -13,6 +13,7 @@
 @interface RecommendedProgramListViewController ()
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UILabel *recommendedLabel;
 
 @end
 
@@ -24,6 +25,9 @@ NSMutableArray* programs;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"sweat-logo.png"]];
+    
+    _recommendedLabel.font = [UIFont fontWithName:@"Montserrat-Bold" size:20];
+    _recommendedLabel.text = @"Recommended for you";
     
     NSDictionary *dict = [self readJSONFromFile];
     NSMutableArray *programsFromJson = [Program objectFromDictionary:dict];

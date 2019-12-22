@@ -21,6 +21,9 @@
 		4D16846B23AA543C00D919B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D16846923AA543C00D919B0 /* LaunchScreen.storyboard */; };
 		4D16846E23AA543C00D919B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D16846D23AA543C00D919B0 /* main.m */; };
 		4D16847823AA543C00D919B0 /* SWEATTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D16847723AA543C00D919B0 /* SWEATTests.m */; };
+		4DABAC0123AF7DA70063BC13 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4DABABFE23AF7DA70063BC13 /* OpenSans-Semibold.ttf */; };
+		4DABAC0223AF7DA70063BC13 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4DABABFF23AF7DA70063BC13 /* OpenSans-Bold.ttf */; };
+		4DABAC0423AF8FC70063BC13 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4DABAC0023AF7DA70063BC13 /* Montserrat-Bold.ttf */; };
 		8E1E6B123DE356CA368BB5BB /* Pods_SWEAT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49636656E236513AA71AED2F /* Pods_SWEAT.framework */; };
 		C74F91DC39CCBBA1F8D751EF /* Pods_SWEATTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB4458BF72A3143B7628CF19 /* Pods_SWEATTests.framework */; };
 /* End PBXBuildFile section */
@@ -62,6 +65,9 @@
 		4D16847323AA543C00D919B0 /* SWEATTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SWEATTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D16847723AA543C00D919B0 /* SWEATTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SWEATTests.m; sourceTree = "<group>"; };
 		4D16847923AA543C00D919B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DABABFE23AF7DA70063BC13 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
+		4DABABFF23AF7DA70063BC13 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		4DABAC0023AF7DA70063BC13 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		94DBF6C88569DCEE77BDA7DF /* Pods-SWEATTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWEATTests.debug.xcconfig"; path = "Target Support Files/Pods-SWEATTests/Pods-SWEATTests.debug.xcconfig"; sourceTree = "<group>"; };
 		96657E2E7777808BB3639E12 /* Pods-SWEATTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWEATTests.release.xcconfig"; path = "Target Support Files/Pods-SWEATTests/Pods-SWEATTests.release.xcconfig"; sourceTree = "<group>"; };
 		C4D8707E25ED3B32EBDBB76C /* Pods-SWEAT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWEAT.debug.xcconfig"; path = "Target Support Files/Pods-SWEAT/Pods-SWEAT.debug.xcconfig"; sourceTree = "<group>"; };
@@ -137,6 +143,7 @@
 		4D16845D23AA543A00D919B0 /* SWEAT */ = {
 			isa = PBXGroup;
 			children = (
+				4DABABFD23AF7CA60063BC13 /* Font */,
 				1A66630123AB8B1500A48F82 /* Support Files */,
 				1A66630023AB8B0F00A48F82 /* Utility */,
 				4D16848223AA5A9900D919B0 /* Screens */,
@@ -208,6 +215,16 @@
 			children = (
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4DABABFD23AF7CA60063BC13 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				4DABAC0023AF7DA70063BC13 /* Montserrat-Bold.ttf */,
+				4DABABFF23AF7DA70063BC13 /* OpenSans-Bold.ttf */,
+				4DABABFE23AF7DA70063BC13 /* OpenSans-Semibold.ttf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 		811E24667A8949E0FBB5BE64 /* Frameworks */ = {
@@ -313,8 +330,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DABAC0123AF7DA70063BC13 /* OpenSans-Semibold.ttf in Resources */,
+				4DABAC0223AF7DA70063BC13 /* OpenSans-Bold.ttf in Resources */,
 				1A66631623ABC5CC00A48F82 /* RecommendedProgramListCell.xib in Resources */,
 				4D16846B23AA543C00D919B0 /* LaunchScreen.storyboard in Resources */,
+				4DABAC0423AF8FC70063BC13 /* Montserrat-Bold.ttf in Resources */,
 				4D16846823AA543C00D919B0 /* Assets.xcassets in Resources */,
 				4D16846623AA543A00D919B0 /* Main.storyboard in Resources */,
 				1A66630323AB8D1300A48F82 /* trainer-programs.json in Resources */,

@@ -19,21 +19,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eTT-q5-UsI">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="148" width="414" height="714"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gYm-mT-c8k">
+                                <rect key="frame" x="20" y="108" width="374" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="zck-xw-ntk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eTT-q5-UsI" secondAttribute="bottom" id="3bD-Ud-ZkM"/>
-                            <constraint firstItem="eTT-q5-UsI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="aXt-hz-Rup"/>
+                            <constraint firstItem="gYm-mT-c8k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Q1h-dW-qZJ"/>
                             <constraint firstItem="eTT-q5-UsI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eMo-FW-9C9"/>
+                            <constraint firstItem="eTT-q5-UsI" firstAttribute="top" secondItem="gYm-mT-c8k" secondAttribute="bottom" constant="10" id="hNF-Vo-FDT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gYm-mT-c8k" secondAttribute="trailing" constant="20" id="k7K-Wo-GIQ"/>
+                            <constraint firstItem="gYm-mT-c8k" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="oBW-l5-gjB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eTT-q5-UsI" secondAttribute="trailing" id="y8U-zk-Nja"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="ZLZ-sy-puT"/>
                     <connections>
+                        <outlet property="recommendedLabel" destination="gYm-mT-c8k" id="UvC-nj-fV0"/>
                         <outlet property="tableView" destination="eTT-q5-UsI" id="6xV-Lj-rOb"/>
                     </connections>
                 </viewController>
