@@ -8,6 +8,7 @@
 
 #import "RecommendedProgramListCell.h"
 #import "Program.h"
+#import <SDWebImage/SDWebImage.h>
 
 @implementation RecommendedProgramListCell
 
@@ -21,7 +22,7 @@
     
     // border
     [_containerView.layer setBorderColor:[UIColor lightGrayColor].CGColor];
-    [_containerView.layer setBorderWidth:0.5f];
+    [_containerView.layer setBorderWidth:0.2f];
     
     // drop shadow
    // [_containerView.layer setShadowColor:[UIColor grayColor].CGColor];
@@ -40,6 +41,10 @@
 - (void)configureCell: (Program*)program {
     
     _programNameLabel.text = program.name;
+    _trainerNameLabel.text = [NSString stringWithFormat:@"with %@", program.trainer.name];
+    NSString *imageUrl = program.trainer.imageUrl;
+    [_programImageView sd_setImageWithURL:[NSURL URLWithString:imageUrl]
+                 placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
 }
 
 

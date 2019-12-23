@@ -1,16 +1,22 @@
 PODS:
   - OCMapper (2.1)
+  - SDWebImage (5.1.0):
+    - SDWebImage/Core (= 5.1.0)
+  - SDWebImage/Core (5.1.0)
 
 DEPENDENCIES:
   - OCMapper
+  - SDWebImage (~> 5.0)
 
 SPEC REPOS:
-  trunk:
+  https://github.com/cocoapods/specs.git:
     - OCMapper
+    - SDWebImage
 
 SPEC CHECKSUMS:
   OCMapper: fa22e7b51de7cc38e66b993037076d28a0f31b29
+  SDWebImage: fb387001955223213dde14bc08c8b73f371f8d8f
 
-PODFILE CHECKSUM: a71255d6bceb9613fc0b8d7f824e6ebe0c4ac6ed
+PODFILE CHECKSUM: 5310ec067b6164f925bf7dad4914588269982b20
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.7.5

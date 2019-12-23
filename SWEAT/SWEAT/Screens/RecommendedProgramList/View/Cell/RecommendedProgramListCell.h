@@ -12,10 +12,13 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface RecommendedProgramListCell : UITableViewCell
+
 @property (weak, nonatomic) IBOutlet UIView *containerView;
-
-
 @property (weak, nonatomic) IBOutlet UILabel *programNameLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *programImageView;
+@property (weak, nonatomic) IBOutlet UILabel *trainerNameLabel;
+
+
 
 - (void)configureCell: (Program*)program;
 
