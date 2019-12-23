@@ -99,6 +99,9 @@
                 <outlet property="containerView" destination="ZgX-Zg-GTz" id="Xb9-1y-Cm1"/>
                 <outlet property="programImageView" destination="Iyy-9G-RfD" id="XET-yk-1OZ"/>
                 <outlet property="programNameLabel" destination="GL0-Rd-fx4" id="d6G-mF-wmR"/>
+                <outlet property="sweatDropImageOne" destination="Ueh-e5-owR" id="heA-jn-AAW"/>
+                <outlet property="sweatDropImageThree" destination="Ml9-lr-Dge" id="wfg-Bf-7ex"/>
+                <outlet property="sweatDropImageTwo" destination="80L-Ml-PbB" id="V9f-rV-lhl"/>
                 <outlet property="trainerNameLabel" destination="a5J-hG-IYn" id="X7y-nu-g2W"/>
             </connections>
             <point key="canvasLocation" x="52.799999999999997" y="48.575712143928037"/>

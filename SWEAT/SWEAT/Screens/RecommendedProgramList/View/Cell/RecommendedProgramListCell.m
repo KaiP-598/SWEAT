@@ -9,6 +9,7 @@
 #import "RecommendedProgramListCell.h"
 #import "Program.h"
 #import <SDWebImage/SDWebImage.h>
+#import "ProgramAttribute.h"
 
 @implementation RecommendedProgramListCell
 
@@ -42,9 +43,39 @@
     
     _programNameLabel.text = program.name;
     _trainerNameLabel.text = [NSString stringWithFormat:@"with %@", program.trainer.name];
+    
+    //Trainer image
     NSString *imageUrl = program.trainer.imageUrl;
     [_programImageView sd_setImageWithURL:[NSURL URLWithString:imageUrl]
                  placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
+    
+    //Sweat drop
+    NSArray *programAttributes = program.attributes;
+    if (programAttributes.count > 0){
+        Attribute *attribute = programAttributes[0];
+        if ([attribute.codeName  isEqual: @"intensity"]){
+            double value = [attribute.value doubleValue];
+            if (value == 1){
+                _sweatDropImageOne.image = [UIImage imageNamed:@"sweat-drop-filled.png"];
+            } else if (value == 2){
+                _sweatDropImageOne.image = [UIImage imageNamed:@"sweat-drop-filled.png"];
+                _sweatDropImageTwo.image = [UIImage imageNamed:@"sweat-drop-filled.png"];
+                
+            } else if (value == 3){
+                _sweatDropImageOne.image = [UIImage imageNamed:@"sweat-drop-filled.png"];
+                _sweatDropImageTwo.image = [UIImage imageNamed:@"sweat-drop-filled.png"];
+                _sweatDropImageThree.image = [UIImage imageNamed:@"sweat-drop-filled.png"];
+            }
+        }
+    }
+
+}
+
+- (void)prepareForReuse{
+    _sweatDropImageOne.image = [UIImage imageNamed:@"sweat-drop.png"];
+    _sweatDropImageTwo.image = [UIImage imageNamed:@"sweat-drop.png"];
+    _sweatDropImageThree.image = [UIImage imageNamed:@"sweat-drop.png"];
+    [super prepareForReuse];
 }
 
 

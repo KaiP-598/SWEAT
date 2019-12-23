@@ -14,4 +14,5 @@
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *value;
 @property (nonatomic, strong) NSString *total;
+@property (nonatomic, strong) NSString *codeName;
 @end

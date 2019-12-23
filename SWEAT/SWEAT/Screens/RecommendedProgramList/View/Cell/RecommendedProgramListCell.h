@@ -17,6 +17,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *programNameLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *programImageView;
 @property (weak, nonatomic) IBOutlet UILabel *trainerNameLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *sweatDropImageOne;
+@property (weak, nonatomic) IBOutlet UIImageView *sweatDropImageTwo;
+@property (weak, nonatomic) IBOutlet UIImageView *sweatDropImageThree;
+
+
 
 
 
