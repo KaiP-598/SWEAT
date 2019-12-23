@@ -52,6 +52,24 @@
                                     <constraint firstAttribute="height" constant="240" id="rSa-gq-p60"/>
                                 </constraints>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="iIo-4d-gAR">
+                                <rect key="frame" x="14" y="68.5" width="60" height="20"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sweat-drop" translatesAutoresizingMaskIntoConstraints="NO" id="Ueh-e5-owR">
+                                        <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sweat-drop" translatesAutoresizingMaskIntoConstraints="NO" id="80L-Ml-PbB">
+                                        <rect key="frame" x="20" y="0.0" width="20" height="20"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sweat-drop" translatesAutoresizingMaskIntoConstraints="NO" id="Ml9-lr-Dge">
+                                        <rect key="frame" x="40" y="0.0" width="20" height="20"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Adm-pz-SJX"/>
+                                    <constraint firstAttribute="width" constant="60" id="xHg-0h-Lhf"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -61,9 +79,11 @@
                             <constraint firstItem="GL0-Rd-fx4" firstAttribute="leading" secondItem="ZgX-Zg-GTz" secondAttribute="leading" constant="14" id="MPY-WN-JtW"/>
                             <constraint firstItem="Iyy-9G-RfD" firstAttribute="leading" secondItem="GL0-Rd-fx4" secondAttribute="trailing" constant="2" id="N1k-9V-CdY"/>
                             <constraint firstItem="a5J-hG-IYn" firstAttribute="top" secondItem="GL0-Rd-fx4" secondAttribute="bottom" id="ay6-1R-hEm"/>
+                            <constraint firstItem="iIo-4d-gAR" firstAttribute="top" secondItem="a5J-hG-IYn" secondAttribute="bottom" constant="4" id="bKx-Yt-g76"/>
                             <constraint firstItem="a5J-hG-IYn" firstAttribute="leading" secondItem="ZgX-Zg-GTz" secondAttribute="leading" constant="14" id="hPl-uj-xcf"/>
                             <constraint firstItem="Iyy-9G-RfD" firstAttribute="leading" secondItem="a5J-hG-IYn" secondAttribute="trailing" constant="2" id="oqY-Qz-9Ge"/>
                             <constraint firstItem="GL0-Rd-fx4" firstAttribute="top" secondItem="ZgX-Zg-GTz" secondAttribute="top" constant="20" id="ptt-a2-8wj"/>
+                            <constraint firstItem="iIo-4d-gAR" firstAttribute="leading" secondItem="a5J-hG-IYn" secondAttribute="leading" id="uen-sK-3XU"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -84,4 +104,7 @@
             <point key="canvasLocation" x="52.799999999999997" y="48.575712143928037"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="sweat-drop" width="14" height="20"/>
+    </resources>
 </document>
