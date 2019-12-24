@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface RecommendedProgramListCell : UITableViewCell<UITableViewDelegate,UITableViewDataSource>{
+@interface RecommendedProgramListCell : UITableViewCell<UITableViewDelegate,UITableViewDataSource, UICollectionViewDelegate, UICollectionViewDataSource>{
     
     
 }
@@ -25,6 +25,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIImageView *sweatDropImageThree;
 @property (weak, nonatomic) IBOutlet UITableView *attributeTableView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableViewHeightConstraint;
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *collectionViewHeight;
 
 
 

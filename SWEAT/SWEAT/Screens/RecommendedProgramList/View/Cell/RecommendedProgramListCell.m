@@ -11,10 +11,12 @@
 #import <SDWebImage/SDWebImage.h>
 #import "ProgramAttribute.h"
 #import "AttributeListCell.h"
+#import "TagCell.h"
 
 @implementation RecommendedProgramListCell
 
 NSArray *programAttributeArray;
+NSArray *tagsArray;
 
 - (void)layoutIfNeeded{
     [super layoutIfNeeded];
@@ -45,8 +47,14 @@ NSArray *programAttributeArray;
     UINib *nib = [UINib nibWithNibName:@"AttributeListCell" bundle:nil];
     [self.attributeTableView registerNib:nib forCellReuseIdentifier:@"AttributeListCell"];
     
+    UINib *collectionViewNib = [UINib nibWithNibName:@"TagCell" bundle:nil];
+    [self.collectionView registerNib:collectionViewNib forCellWithReuseIdentifier:@"TagCell.h"];
+    
     self.attributeTableView.delegate = self;
     self.attributeTableView.dataSource = self;
+    
+    self.collectionView.delegate = self;
+    self.collectionView.dataSource = self;
     
 }
 
@@ -91,6 +99,10 @@ NSArray *programAttributeArray;
             [self configureAttributeList:programAttributeArray];
         }
     }
+    
+    //Tags
+    tagsArray = program.tags;
+    [self configureTagList];
 
 }
 
@@ -99,6 +111,14 @@ NSArray *programAttributeArray;
     [_attributeTableView reloadData];
     _tableViewHeightConstraint.constant = programAttributeArray.count * 50;
 }
+
+- (void)configureTagList{
+    [_collectionView reloadData];
+    [_collectionView layoutIfNeeded];
+    _collectionViewHeight.constant = _collectionView.contentSize.height;
+}
+
+
 
 - (void)prepareForReuse{
     _sweatDropImageOne.image = [UIImage imageNamed:@"sweat-drop.png"];
@@ -124,6 +144,22 @@ NSArray *programAttributeArray;
     Attribute *attribute = programAttributeArray[indexPath.row];
     [cell configureCell:attribute];
     [cell layoutIfNeeded];
+    return cell;
+}
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    return 1;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return tagsArray.count;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"TagCell.h" forIndexPath:indexPath];
     return cell;
 }
 
