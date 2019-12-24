@@ -24,6 +24,8 @@
 		4DABAC0123AF7DA70063BC13 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4DABABFE23AF7DA70063BC13 /* OpenSans-Semibold.ttf */; };
 		4DABAC0223AF7DA70063BC13 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4DABABFF23AF7DA70063BC13 /* OpenSans-Bold.ttf */; };
 		4DABAC0423AF8FC70063BC13 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4DABAC0023AF7DA70063BC13 /* Montserrat-Bold.ttf */; };
+		4DABAC0823B0BA870063BC13 /* AttributeListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DABAC0623B0BA870063BC13 /* AttributeListCell.m */; };
+		4DABAC0923B0BA870063BC13 /* AttributeListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DABAC0723B0BA870063BC13 /* AttributeListCell.xib */; };
 		8E1E6B123DE356CA368BB5BB /* Pods_SWEAT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49636656E236513AA71AED2F /* Pods_SWEAT.framework */; };
 		C74F91DC39CCBBA1F8D751EF /* Pods_SWEATTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB4458BF72A3143B7628CF19 /* Pods_SWEATTests.framework */; };
 /* End PBXBuildFile section */
@@ -68,6 +70,9 @@
 		4DABABFE23AF7DA70063BC13 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
 		4DABABFF23AF7DA70063BC13 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		4DABAC0023AF7DA70063BC13 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		4DABAC0523B0BA870063BC13 /* AttributeListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AttributeListCell.h; sourceTree = "<group>"; };
+		4DABAC0623B0BA870063BC13 /* AttributeListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AttributeListCell.m; sourceTree = "<group>"; };
+		4DABAC0723B0BA870063BC13 /* AttributeListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AttributeListCell.xib; sourceTree = "<group>"; };
 		94DBF6C88569DCEE77BDA7DF /* Pods-SWEATTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWEATTests.debug.xcconfig"; path = "Target Support Files/Pods-SWEATTests/Pods-SWEATTests.debug.xcconfig"; sourceTree = "<group>"; };
 		96657E2E7777808BB3639E12 /* Pods-SWEATTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWEATTests.release.xcconfig"; path = "Target Support Files/Pods-SWEATTests/Pods-SWEATTests.release.xcconfig"; sourceTree = "<group>"; };
 		C4D8707E25ED3B32EBDBB76C /* Pods-SWEAT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWEAT.debug.xcconfig"; path = "Target Support Files/Pods-SWEAT/Pods-SWEAT.debug.xcconfig"; sourceTree = "<group>"; };
@@ -101,6 +106,9 @@
 				1A66631223ABC5CC00A48F82 /* RecommendedProgramListCell.h */,
 				1A66631323ABC5CC00A48F82 /* RecommendedProgramListCell.m */,
 				1A66631423ABC5CC00A48F82 /* RecommendedProgramListCell.xib */,
+				4DABAC0523B0BA870063BC13 /* AttributeListCell.h */,
+				4DABAC0623B0BA870063BC13 /* AttributeListCell.m */,
+				4DABAC0723B0BA870063BC13 /* AttributeListCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -330,6 +338,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DABAC0923B0BA870063BC13 /* AttributeListCell.xib in Resources */,
 				4DABAC0123AF7DA70063BC13 /* OpenSans-Semibold.ttf in Resources */,
 				4DABAC0223AF7DA70063BC13 /* OpenSans-Bold.ttf in Resources */,
 				1A66631623ABC5CC00A48F82 /* RecommendedProgramListCell.xib in Resources */,
@@ -425,6 +434,7 @@
 				1A66631123ABB23300A48F82 /* ProgramTag.m in Sources */,
 				4D16846023AA543A00D919B0 /* AppDelegate.m in Sources */,
 				1A66630A23ABAA4500A48F82 /* ProgramAttribute.m in Sources */,
+				4DABAC0823B0BA870063BC13 /* AttributeListCell.m in Sources */,
 				1A66631523ABC5CC00A48F82 /* RecommendedProgramListCell.m in Sources */,
 				1A66630E23ABB00D00A48F82 /* Trainer.m in Sources */,
 			);

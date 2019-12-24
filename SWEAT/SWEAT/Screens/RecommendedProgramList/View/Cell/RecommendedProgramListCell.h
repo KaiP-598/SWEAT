@@ -11,7 +11,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface RecommendedProgramListCell : UITableViewCell
+@interface RecommendedProgramListCell : UITableViewCell<UITableViewDelegate,UITableViewDataSource>{
+    
+    
+}
 
 @property (weak, nonatomic) IBOutlet UIView *containerView;
 @property (weak, nonatomic) IBOutlet UILabel *programNameLabel;
@@ -20,6 +23,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIImageView *sweatDropImageOne;
 @property (weak, nonatomic) IBOutlet UIImageView *sweatDropImageTwo;
 @property (weak, nonatomic) IBOutlet UIImageView *sweatDropImageThree;
+@property (weak, nonatomic) IBOutlet UITableView *attributeTableView;
+
 
 
 

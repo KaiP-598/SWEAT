@@ -10,10 +10,11 @@
 #import "Program.h"
 #import <SDWebImage/SDWebImage.h>
 #import "ProgramAttribute.h"
+#import "AttributeListCell.h"
 
 @implementation RecommendedProgramListCell
 
-
+NSArray *programAttributeArray;
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -30,6 +31,12 @@
     [_containerView.layer setShadowOpacity:0.5];
     [_containerView.layer setShadowRadius:1.0];
     [_containerView.layer setShadowOffset:CGSizeMake(0.0, 1.0)];
+    
+    UINib *nib = [UINib nibWithNibName:@"AttributeListCell" bundle:nil];
+    [self.attributeTableView registerNib:nib forCellReuseIdentifier:@"AttributeListCell"];
+    
+    self.attributeTableView.delegate = self;
+    self.attributeTableView.dataSource = self;
     
 }
 
@@ -67,8 +74,20 @@
                 _sweatDropImageThree.image = [UIImage imageNamed:@"sweat-drop-filled.png"];
             }
         }
+        
+        if (programAttributes.count > 1){
+            programAttributeArray = [programAttributes subarrayWithRange:NSMakeRange(1, programAttributes.count - 1)];
+            
+            [self configureAttributeList:programAttributeArray];
+        }
     }
 
+}
+
+- (void)configureAttributeList: (NSArray*)attributes {
+    NSLog(@"array count %lu",(unsigned long)programAttributeArray.count);
+    [_attributeTableView reloadData];
+    
 }
 
 - (void)prepareForReuse{
@@ -76,6 +95,25 @@
     _sweatDropImageTwo.image = [UIImage imageNamed:@"sweat-drop.png"];
     _sweatDropImageThree.image = [UIImage imageNamed:@"sweat-drop.png"];
     [super prepareForReuse];
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return programAttributeArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    static NSString *cellIdentifier = @"AttributeListCell";
+    
+    AttributeListCell *cell = [self.attributeTableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    
+    Attribute *attribute = programAttributeArray[indexPath.row];
+    [cell configureCell:attribute];
+    return cell;
 }
 
 

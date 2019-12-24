@@ -70,14 +70,24 @@
                                     <constraint firstAttribute="width" constant="60" id="xHg-0h-Lhf"/>
                                 </constraints>
                             </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qvi-PX-Fm1">
+                                <rect key="frame" x="14" y="94.5" width="124" height="150"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="T59-bP-LeC"/>
+                                </constraints>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="Iyy-9G-RfD" secondAttribute="bottom" constant="48.5" id="6zz-rD-ss2"/>
                             <constraint firstAttribute="trailing" secondItem="Iyy-9G-RfD" secondAttribute="trailing" constant="20" id="7wA-Ga-LmB"/>
                             <constraint firstItem="Iyy-9G-RfD" firstAttribute="top" secondItem="ZgX-Zg-GTz" secondAttribute="top" constant="30" id="9b3-b3-He9"/>
+                            <constraint firstItem="Qvi-PX-Fm1" firstAttribute="leading" secondItem="a5J-hG-IYn" secondAttribute="leading" id="9fz-gj-Kry"/>
                             <constraint firstItem="GL0-Rd-fx4" firstAttribute="leading" secondItem="ZgX-Zg-GTz" secondAttribute="leading" constant="14" id="MPY-WN-JtW"/>
                             <constraint firstItem="Iyy-9G-RfD" firstAttribute="leading" secondItem="GL0-Rd-fx4" secondAttribute="trailing" constant="2" id="N1k-9V-CdY"/>
+                            <constraint firstItem="Qvi-PX-Fm1" firstAttribute="top" secondItem="iIo-4d-gAR" secondAttribute="bottom" constant="6" id="V5G-HJ-GIo"/>
+                            <constraint firstItem="Qvi-PX-Fm1" firstAttribute="trailing" secondItem="a5J-hG-IYn" secondAttribute="trailing" id="Zvr-BG-sj1"/>
                             <constraint firstItem="a5J-hG-IYn" firstAttribute="top" secondItem="GL0-Rd-fx4" secondAttribute="bottom" id="ay6-1R-hEm"/>
                             <constraint firstItem="iIo-4d-gAR" firstAttribute="top" secondItem="a5J-hG-IYn" secondAttribute="bottom" constant="4" id="bKx-Yt-g76"/>
                             <constraint firstItem="a5J-hG-IYn" firstAttribute="leading" secondItem="ZgX-Zg-GTz" secondAttribute="leading" constant="14" id="hPl-uj-xcf"/>
@@ -96,6 +106,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <connections>
+                <outlet property="attributeTableView" destination="Qvi-PX-Fm1" id="Pas-DJ-atJ"/>
                 <outlet property="containerView" destination="ZgX-Zg-GTz" id="Xb9-1y-Cm1"/>
                 <outlet property="programImageView" destination="Iyy-9G-RfD" id="XET-yk-1OZ"/>
                 <outlet property="programNameLabel" destination="GL0-Rd-fx4" id="d6G-mF-wmR"/>
