@@ -24,6 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIImageView *sweatDropImageTwo;
 @property (weak, nonatomic) IBOutlet UIImageView *sweatDropImageThree;
 @property (weak, nonatomic) IBOutlet UITableView *attributeTableView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableViewHeightConstraint;
 
 
 

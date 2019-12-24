@@ -16,6 +16,16 @@
 
 NSArray *programAttributeArray;
 
+- (void)layoutIfNeeded{
+    [super layoutIfNeeded];
+    [_attributeTableView reloadData];
+}
+
+- (void)layoutSubviews{
+    [super layoutSubviews];
+    [_attributeTableView reloadData];
+}
+
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
@@ -87,7 +97,7 @@ NSArray *programAttributeArray;
 - (void)configureAttributeList: (NSArray*)attributes {
     NSLog(@"array count %lu",(unsigned long)programAttributeArray.count);
     [_attributeTableView reloadData];
-    
+    _tableViewHeightConstraint.constant = programAttributeArray.count * 50;
 }
 
 - (void)prepareForReuse{
@@ -113,6 +123,7 @@ NSArray *programAttributeArray;
     
     Attribute *attribute = programAttributeArray[indexPath.row];
     [cell configureCell:attribute];
+    [cell layoutIfNeeded];
     return cell;
 }
 

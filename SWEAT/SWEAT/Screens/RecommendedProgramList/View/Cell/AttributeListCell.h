@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *attributeNameLabel;
 @property (weak, nonatomic) IBOutlet UIView *shadowView;
 @property (weak, nonatomic) IBOutlet UIView *colouredView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *colouredViewWidthConstraint;
+
 
 - (void)configureCell: (Attribute*)attribute;
 

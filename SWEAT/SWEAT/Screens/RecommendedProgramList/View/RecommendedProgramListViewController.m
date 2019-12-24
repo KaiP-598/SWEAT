@@ -69,6 +69,7 @@ NSMutableArray* programs;
     
     Program *program = programs[indexPath.row];
     [cell configureCell:program];
+    [cell layoutIfNeeded];
     return cell;
 }
 
