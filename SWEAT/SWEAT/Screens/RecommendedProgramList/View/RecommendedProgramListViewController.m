@@ -38,12 +38,17 @@ NSMutableArray* programs;
 
     programs = programsFromJson;
     
-    
     UINib *nib = [UINib nibWithNibName:@"RecommendedProgramListCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"RecommendedProgramListCell"];
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+   // [self.tableView reloadData];
+    [super viewDidAppear: YES];
+    [self.tableView reloadData];
 }
 
 - (NSDictionary *)readJSONFromFile
@@ -69,6 +74,7 @@ NSMutableArray* programs;
     
     Program *program = programs[indexPath.row];
     [cell configureCell:program];
+    [cell layoutSubviews];
     [cell layoutIfNeeded];
     return cell;
 }

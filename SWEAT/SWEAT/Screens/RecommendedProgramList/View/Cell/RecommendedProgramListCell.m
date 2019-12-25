@@ -18,16 +18,6 @@
 NSArray *programAttributeArray;
 NSArray *tagsArray;
 
-- (void)layoutIfNeeded{
-    [super layoutIfNeeded];
-    [_attributeTableView reloadData];
-}
-
-- (void)layoutSubviews{
-    [super layoutSubviews];
-    [_attributeTableView reloadData];
-}
-
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
@@ -124,6 +114,8 @@ NSArray *tagsArray;
     _sweatDropImageOne.image = [UIImage imageNamed:@"sweat-drop.png"];
     _sweatDropImageTwo.image = [UIImage imageNamed:@"sweat-drop.png"];
     _sweatDropImageThree.image = [UIImage imageNamed:@"sweat-drop.png"];
+    programAttributeArray = nil;
+    tagsArray = nil;
     [super prepareForReuse];
 }
 
@@ -164,7 +156,6 @@ NSArray *tagsArray;
     Tag *tag = tagsArray[indexPath.row];
     [cell configureCell:tag];
     [cell layoutIfNeeded];
-
     return cell;
 }
 
