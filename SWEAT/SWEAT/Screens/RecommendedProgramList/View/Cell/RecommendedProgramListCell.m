@@ -159,8 +159,28 @@ NSArray *tagsArray;
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"TagCell.h" forIndexPath:indexPath];
+    TagCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"TagCell.h" forIndexPath:indexPath];
+    
+    Tag *tag = tagsArray[indexPath.row];
+    [cell configureCell:tag];
+    [cell layoutIfNeeded];
+
     return cell;
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView
+                  layout:(UICollectionViewLayout *)collectionViewLayout
+  sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
+    Tag *tag = tagsArray[indexPath.row];
+    NSString *name = tag.name;
+
+    UIFont *myFont = [UIFont fontWithName:@"OpenSans-Semibold" size:8];
+    
+    CGRect frame = [name boundingRectWithSize:CGSizeMake(9999, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{ NSFontAttributeName:myFont } context:nil];
+    CGSize size = CGSizeMake(frame.size.width + 28, 20);
+
+    return size;
+
 }
 
 
