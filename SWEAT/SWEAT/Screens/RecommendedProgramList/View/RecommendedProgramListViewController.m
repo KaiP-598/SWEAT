@@ -51,6 +51,7 @@ NSMutableArray* programs;
     [self.tableView reloadData];
 }
 
+//Method to read the provider JSON file
 - (NSDictionary *)readJSONFromFile
 {
     NSString *path = [[NSBundle mainBundle] pathForResource:@"trainer-programs" ofType:@"json"];
@@ -74,8 +75,6 @@ NSMutableArray* programs;
     
     Program *program = programs[indexPath.row];
     [cell configureCell:program];
-    [cell layoutSubviews];
-    [cell layoutIfNeeded];
     return cell;
 }
 

@@ -121,13 +121,6 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		1A66630023AB8B0F00A48F82 /* Utility */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utility;
-			sourceTree = "<group>";
-		};
 		1A66630123AB8B1500A48F82 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,7 +154,6 @@
 			children = (
 				4DABABFD23AF7CA60063BC13 /* Font */,
 				1A66630123AB8B1500A48F82 /* Support Files */,
-				1A66630023AB8B0F00A48F82 /* Utility */,
 				4D16848223AA5A9900D919B0 /* Screens */,
 				4D16845E23AA543A00D919B0 /* AppDelegate.h */,
 				4D16845F23AA543A00D919B0 /* AppDelegate.m */,
@@ -196,7 +188,6 @@
 			children = (
 				4D16848423AA5C5F00D919B0 /* Model */,
 				4D16848523AA5C6400D919B0 /* View */,
-				4D16848623AA5C6800D919B0 /* ViewModel */,
 			);
 			path = RecommendedProgramList;
 			sourceTree = "<group>";
@@ -224,13 +215,6 @@
 				4D16846223AA543A00D919B0 /* RecommendedProgramListViewController.m */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		4D16848623AA5C6800D919B0 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		4DABABFD23AF7CA60063BC13 /* Font */ = {

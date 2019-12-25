@@ -50,6 +50,7 @@ double percentage;
     
     double value = [attribute.value doubleValue];
     double total = [attribute.total doubleValue];
+    //calculate the percentage of the coloured view
     percentage = value / total;
     [self configureColouredViewWidth];
 }

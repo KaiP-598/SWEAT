@@ -31,13 +31,13 @@
                         <rect key="frame" x="20" y="21" width="280" height="318.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GL0-Rd-fx4">
-                                <rect key="frame" x="14" y="20" width="134" height="21.5"/>
+                                <rect key="frame" x="14" y="20" width="134" height="24.5"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="17"/>
                                 <color key="textColor" red="0.97254901960784312" green="0.0" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="with" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5J-hG-IYn">
-                                <rect key="frame" x="14" y="41.5" width="134" height="21"/>
+                                <rect key="frame" x="14" y="44.5" width="134" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="nbX-AA-xUP"/>
                                 </constraints>
@@ -53,7 +53,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="iIo-4d-gAR">
-                                <rect key="frame" x="14" y="66.5" width="60" height="20"/>
+                                <rect key="frame" x="14" y="69.5" width="60" height="20"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sweat-drop" translatesAutoresizingMaskIntoConstraints="NO" id="Ueh-e5-owR">
                                         <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
@@ -71,7 +71,7 @@
                                 </constraints>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qvi-PX-Fm1">
-                                <rect key="frame" x="14" y="92.5" width="134" height="150"/>
+                                <rect key="frame" x="14" y="95.5" width="134" height="150"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="T59-bP-LeC"/>
@@ -93,7 +93,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="NTf-9w-atZ" firstAttribute="top" secondItem="Qvi-PX-Fm1" secondAttribute="bottom" constant="4" id="2wK-yJ-TgO"/>
+                            <constraint firstItem="NTf-9w-atZ" firstAttribute="top" secondItem="Qvi-PX-Fm1" secondAttribute="bottom" constant="1" id="2wK-yJ-TgO"/>
                             <constraint firstItem="NTf-9w-atZ" firstAttribute="leading" secondItem="Qvi-PX-Fm1" secondAttribute="leading" id="4OX-Pv-mDH"/>
                             <constraint firstAttribute="trailing" secondItem="Iyy-9G-RfD" secondAttribute="trailing" constant="20" id="7wA-Ga-LmB"/>
                             <constraint firstItem="Iyy-9G-RfD" firstAttribute="top" secondItem="ZgX-Zg-GTz" secondAttribute="top" constant="30" id="9b3-b3-He9"/>

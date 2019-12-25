@@ -84,6 +84,7 @@ NSArray *tagsArray;
         }
         
         if (programAttributes.count > 1){
+            //The first element is for intensity only, so do not need it
             programAttributeArray = [programAttributes subarrayWithRange:NSMakeRange(1, programAttributes.count - 1)];
             
             [self configureAttributeList:programAttributeArray];
@@ -162,6 +163,7 @@ NSArray *tagsArray;
 - (CGSize)collectionView:(UICollectionView *)collectionView
                   layout:(UICollectionViewLayout *)collectionViewLayout
   sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
+    //Resize the collection view cell based on text size
     Tag *tag = tagsArray[indexPath.row];
     NSString *name = tag.name;
 
